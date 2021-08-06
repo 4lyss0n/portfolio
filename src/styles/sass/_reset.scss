@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#__next {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul,
+ol {
+    list-style: none;
+}

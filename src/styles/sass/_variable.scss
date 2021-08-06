@@ -1,0 +1,41 @@
+:root {
+    --color1: #a60ccc;
+    --color2: #823695;
+    --color3: #680880;
+    --color4: #b249cc;
+    --color5: #3e054d;
+}
+
+$color1: var(--color1);
+$color2: var(--color2);
+$color3: var(--color3);
+$color4: var(--color4);
+$color5: var(--color5);
+
+body {
+    background-image: linear-gradient(45deg, $color5, $color1, $color5);
+    // background-image: linear-gradient(45deg, #f00, #0f0, #00f);
+    background-size: 300vw 300vh;
+    animation: background-move-animation 20s linear infinite alternate-reverse;
+}
+
+@keyframes background-move-animation {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+/*
+#A60CCC
+
+#823695
+
+#680880
+
+#B249CC
+
+#3E054D
+*/

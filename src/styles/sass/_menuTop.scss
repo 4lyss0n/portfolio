@@ -1,0 +1,99 @@
+// @import "variable";
+
+#menu-top {
+    background-color: $color3;
+    ul {
+        width: 100%;
+    }
+}
+
+@media (min-width: 501px) {
+    #menu-top {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        animation: Load 200ms backwards;
+        ul {
+            max-width: 50%;
+            display: flex;
+            justify-content: space-around;
+            li {
+                background-color: rgba(0, 0, 0, 0.1);
+                a {
+                    text-align: center;
+                    margin: 0.5rem 0;
+                    font-size: 1.5rem;
+                    color: white;
+                    transition: transform 20ms;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    #menu-top-check-button-label {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    #menu-top {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        transition: all 200ms;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 80%;
+            width: 80%;
+            // background-color: rgba(0, 0, 0, 0);
+            box-shadow: 10px 10px 8px rgba(0, 0, 0, .05);
+            li {
+                // width: 100%;
+                margin-top: .5rem;
+                a{
+                    color: white;
+                    font-size: 2rem;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    #menu-top-check-button-label {
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        right: 0;
+        font-size: 3rem;
+    }
+
+    #menu-top.close {
+        transform: translateY(-101%);
+    }
+}
+
+
+
+
+@keyframes Load {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
