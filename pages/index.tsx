@@ -1,4 +1,4 @@
-import { Menu, Head } from '../src/components'
+import { Menu, Head,Header } from '../src/components'
 
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
         description="4lysson_ portifolio web page create by Nextjs"
       />
       <Menu />
+      <Header />
     </>
   )
 }

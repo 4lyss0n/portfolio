@@ -1,0 +1,89 @@
+#header-image-container {
+    overflow: hidden;
+}
+
+@media (min-width: 500px) {
+    #header-main-page {
+        height: 100vh;
+        display: flex;
+        #header-image-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #header-image {
+                position: relative;
+                width: 120%;
+                // height: 100%;
+            }
+        }
+
+        #title-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: center;
+            * {
+                color: #ddd;
+            }
+            h1 {
+                flex: 0.5;
+                font-weight: bold;
+                font-size: 3.5rem;
+                &:hover {
+                    text-decoration: underline;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 501px) {
+    #header-main-page {
+        height: 100vh;
+        display: flex;
+        #header-image-container {
+            display: none;
+            flex: 1;
+            // display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #header-image {
+                // display: none;
+                position: relative;
+                width: 120%;
+                // height: 100%;
+            }
+        }
+
+        #title-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: center;
+            * {
+                color: #ddd;
+            }
+            h1 {
+                width: 80%;
+                flex: 0.5;
+                font-weight: bold;
+                font-size: 3.5rem;
+                &:hover {
+                    text-decoration: underline;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+}

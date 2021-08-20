@@ -11,6 +11,7 @@
     #menu-top {
         width: 100vw;
         display: flex;
+        position: fixed;
         justify-content: flex-end;
         animation: Load 200ms backwards;
         ul {
