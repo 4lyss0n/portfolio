@@ -21,6 +21,16 @@ ol {
   list-style: none;
 }
 
+input {
+  background-color: transparent;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
 :root {
   --color1: #a60ccc;
   --color2: #823695;
@@ -30,9 +40,9 @@ ol {
 }
 
 body {
-  background-image: linear-gradient(45deg, var(--color5), var(--color2), var(--color5));
-  background-size: 200vw 200vh;
-  animation: background-move-animation 5s linear infinite alternate-reverse;
+  background-image: linear-gradient(45deg, var(--color5), var(--color1), var(--color5));
+  background-size: 300vw 300vh;
+  animation: background-move-animation 20s linear infinite alternate-reverse;
 }
 
 @-webkit-keyframes background-move-animation {
@@ -208,9 +218,9 @@ body {
 }
 
 body {
-  background-image: linear-gradient(45deg, var(--color5), var(--color2), var(--color5));
-  background-size: 200vw 200vh;
-  animation: background-move-animation 5s linear infinite alternate-reverse;
+  background-image: linear-gradient(45deg, var(--color5), var(--color1), var(--color5));
+  background-size: 300vw 300vh;
+  animation: background-move-animation 20s linear infinite alternate-reverse;
 }
 
 @keyframes background-move-animation {

@@ -1,6 +1,5 @@
 
-import { useState } from "react"
-import { FunctionComponent } from "react"
+import { FunctionComponent, useState } from "react"
 import { BiHide, BiShow } from 'react-icons/bi'
 
 interface IProps {
@@ -17,7 +16,9 @@ const LoginPage: FunctionComponent<IProps> = ({ }) => {
     return (
         <>
             <form action="#">
-                <p>Email : </p>
+                <p>Email : <input type="email" onChange={e => setEmail(e.target.value)} value={email} /></p>
+
+
 
                 <input type="button" onClick={e => {
                     e.preventDefault()
@@ -27,18 +28,15 @@ const LoginPage: FunctionComponent<IProps> = ({ }) => {
                     id="show-password-button"
                 />
 
-                <p>Password : <label htmlFor="show-password-button">{
-                    passwordIsShow ? <BiHide /> : <BiShow />
-
-                }</label>
-                </p>
 
 
-                <input type="email" onChange={e => setEmail(e.target.value)} value={email} />
-                <input type={passwordIsShow ? 'text' : 'password'}
+                <p>Password :    <input type={passwordIsShow ? 'text' : 'password'}
                     onChange={e => setPassword(e.target.value)}
                     value={password}
-                />
+                /> <label htmlFor="show-password-button">{
+                    passwordIsShow ? <BiHide /> : <BiShow />
+                }</label>
+                </p>
 
             </form>
         </>
