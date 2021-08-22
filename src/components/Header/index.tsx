@@ -22,7 +22,7 @@ const Component: FunctionComponent<IProps> = ({ }) => {
             for(let c=0;c <= arr.length;c++){
                 await delay(time)
                 await setTitle(arr.slice(0,c))
-                time = time -5
+                time = time -1
             }
         })()
     }, [])
