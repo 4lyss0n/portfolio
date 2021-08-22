@@ -4,29 +4,13 @@ import sgv from '../../../public/devs.svg'
 import { useState } from "react";
 import { useEffect } from "react";
 import { useCallback } from "react";
+import { TypingText } from '../'
 
 interface IProps {
 
 }
 
 const Component: FunctionComponent<IProps> = ({ }) => {
-
-    const [title, setTitle] = useState<string[]>([])
-
-    const delay = (ms: number) => new Promise((resolve) => setInterval(resolve, ms))
-    useEffect(() => {
-        (async () => {
-            const arr = ('Bem vindo ao meu portifolio').split("")
-            let time = 50
-
-            for(let c=0;c <= arr.length;c++){
-                await delay(time)
-                await setTitle(arr.slice(0,c))
-                time = time -1
-            }
-        })()
-    }, [])
-
     return (
         <>
             <header id="header-main-page">
@@ -42,7 +26,9 @@ const Component: FunctionComponent<IProps> = ({ }) => {
                 </div>
                 <div id="title-container">
                     <h1>
-                        {title.length > 0 ? title.reduce((v,a) => v+a) : ''}
+                        <TypingText typeDelay={80} addInDelayOnStep={-1}>{[
+                        "Bem Vindo a meu portifolio"
+                        ]}</TypingText>
                     </h1>
                 </div>
             </header>
