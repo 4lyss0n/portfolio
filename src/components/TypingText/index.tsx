@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { FunctionComponent } from "react";
+import { useEffect, useState, FunctionComponent} from "react";
 
 
 interface IProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
@@ -38,29 +36,29 @@ const Component: FunctionComponent<IProps> = ({ children, typeDelay = 10, addInD
 
     useEffect(() => {
 
-        const resultArray:Array<string | JSX.Element> = []
+        const resultArray: Array<string | JSX.Element> = []
 
         textArrayState.forEach(item => {
-            if(typeof(item) == 'string') {
-                if(
-                    typeof(resultArray[resultArray.length > 0 ? resultArray.length-1 : 0]) != 'string'
-                ){
+            if (typeof (item) == 'string') {
+                if (
+                    typeof (resultArray[resultArray.length > 0 ? resultArray.length - 1 : 0]) != 'string'
+                ) {
                     resultArray.push(item)
                     return
                 }
-                resultArray[resultArray.length -1] = resultArray[resultArray.length -1] + item
+                resultArray[resultArray.length - 1] = resultArray[resultArray.length - 1] + item
                 return
             }
             resultArray.push(item)
         })
 
         setText(resultArray)
-        
-    },[textArrayState])
+
+    }, [textArrayState])
 
     return (
         <span {...props}>
-                {text}
+            {text}
         </span>
     )
 }

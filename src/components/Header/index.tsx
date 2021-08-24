@@ -1,9 +1,6 @@
 import { FunctionComponent } from "react";
 import NextImage from 'next/image'
 import sgv from '../../../public/devs.svg'
-import { useState } from "react";
-import { useEffect } from "react";
-import { useCallback } from "react";
 import { TypingText } from '../'
 
 interface IProps {
@@ -27,7 +24,12 @@ const Component: FunctionComponent<IProps> = ({ }) => {
                 <div id="title-container">
                     <h1>
                         <TypingText typeDelay={80} addInDelayOnStep={-1}>{[
-                        "Bem Vindo a meu portifolio"
+                            <span className="chrome-text-effect">B</span>,
+                            "em ",
+                            <span className="chrome-text-effect">V</span>,
+                            "indo a meu ",
+                            <span className="chrome-text-effect">P</span>,
+                            "ortifolio"
                         ]}</TypingText>
                     </h1>
                 </div>

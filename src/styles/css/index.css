@@ -293,7 +293,7 @@ body {
             align-items: center;
   }
   #header-main-page #title-container * {
-    color: #ddd;
+    color: #000;
   }
   #header-main-page #title-container h1 {
     -webkit-box-flex: 0.5;
@@ -360,7 +360,7 @@ body {
             align-items: center;
   }
   #header-main-page #title-container * {
-    color: #ddd;
+    color: #000;
   }
   #header-main-page #title-container h1 {
     width: 80%;
@@ -382,6 +382,42 @@ body {
   }
   #header-main-page #title-container h1:hover {
     text-decoration: underline;
+  }
+}
+
+.chrome-text-effect {
+  color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-image: url(http://localhost:3000/api/svg/space.svg?maxStars=50000?size=100);
+  position: relative;
+  z-index: 1;
+  -webkit-animation: Chrome-text-effect-animation 15s linear infinite;
+          animation: Chrome-text-effect-animation 15s linear infinite;
+}
+
+.chrome-text-effect:hover {
+  -webkit-text-decoration-color: transparent;
+          text-decoration-color: transparent;
+}
+
+@-webkit-keyframes Chrome-text-effect-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes Chrome-text-effect-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }
 /*# sourceMappingURL=index.css.map */

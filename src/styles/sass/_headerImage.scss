@@ -26,7 +26,7 @@
             align-items: center;
             // justify-content: center;
             * {
-                color: #ddd;
+                color: #000;
             }
             h1 {
                 flex: 0.5;
@@ -42,7 +42,6 @@
         }
     }
 }
-
 
 @media (max-width: 501px) {
     #header-main-page {
@@ -70,7 +69,7 @@
             align-items: center;
             // justify-content: center;
             * {
-                color: #ddd;
+                color: #000;
             }
             h1 {
                 width: 80%;
@@ -86,4 +85,31 @@
             }
         }
     }
+}
+
+.chrome-text-effect {
+    color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-image: url(http://localhost:3000/api/svg/space.svg?maxStars=50000?size=100);//linear-gradient(45deg, red, blue);
+    // background-size: 300%;
+    position: relative;
+    z-index: 1;
+   animation: Chrome-text-effect-animation 15s linear infinite;
+    &:hover {
+        text-decoration-color: transparent;
+    }
+}
+
+
+@keyframes Chrome-text-effect-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+    
 }
