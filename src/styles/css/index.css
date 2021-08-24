@@ -391,7 +391,7 @@ body {
   -webkit-text-fill-color: transparent;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  background-image: url(http://localhost:3000/api/svg/space.svg?maxStars=50000?size=100);
+  background-image: url(https://portfolio-4lysson.vercel.app/api/svg/space.svg?maxStars=50000?size=100);
   position: relative;
   z-index: 1;
   -webkit-animation: Chrome-text-effect-animation 15s linear infinite;
