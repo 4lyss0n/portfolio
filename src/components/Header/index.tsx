@@ -24,12 +24,9 @@ const Component: FunctionComponent<IProps> = ({ }) => {
                 <div id="title-container">
                     <h1>
                         <TypingText typeDelay={80} addInDelayOnStep={-1}>{[
-                            <span className="chrome-text-effect" key="header-tilte-b">B</span>,
-                            "em ",
-                            <span className="chrome-text-effect" key="header-tilte-v">V</span>,
-                            "indo a meu ",
-                            <span className="chrome-text-effect" key="header-tilte-p">P</span>,
-                            "ortifolio"
+                            "Bem ",
+                            "Vindo a meu ",
+                            "Portifolio"
                         ]}</TypingText>
                     </h1>
                 </div>
