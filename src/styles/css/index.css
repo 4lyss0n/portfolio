@@ -293,7 +293,7 @@ body {
             align-items: center;
   }
   #header-main-page #title-container * {
-    color: #000;
+    color: #ccc;
   }
   #header-main-page #title-container h1 {
     -webkit-box-flex: 0.5;

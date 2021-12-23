@@ -1,0 +1,90 @@
+.container {
+    position: absolute;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    --c1: #0a0a0a;
+    --c2: #f4a;
+    --size: 15vw;
+}
+
+.cube {
+    position: relative;
+    width: var(--size);
+    height: var(--size);
+    transform-style: preserve-3d;
+    /* transform: rotateX(-30deg) rotateY(45deg) rotateZ(0deg); */
+
+    animation: animate 3s linear infinite;
+}
+
+.cube .sides {
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+
+.side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--c1), var(--c2));
+    transform: rotateY(calc(90deg * var(--side))) translateZ(calc(var(--size) / 2));
+    outline: black solid 1px;
+}
+.cube .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c1);
+    transform: rotateX(90deg) translateZ(calc(var(--size) / 2));
+}
+
+.cube .bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c2);
+    transform: rotateX(90deg) translateZ(calc(var(--size) / -2));
+}
+
+.cube .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c2);
+    transform: rotateX(90deg) translateZ(calc(var(--size) * -1.3)) scale(3);
+    border-radius: 30%;
+    filter: blur(calc(var(--size) * 0.15));
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotateX(0deg) rotateY(360deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(0deg) rotateZ(360deg);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateX(-30deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg) rotateZ(0deg);
+    }
+}
