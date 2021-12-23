@@ -9,7 +9,7 @@ const Component: FunctionComponent<IProps> = ({ }) => {
 
     useEffect(() => {
         document.querySelectorAll("." + Styles.side)
-            .forEach((e, i) => e.style.setProperty('--side', i.toString()))
+            .forEach((e: any, i) => e.style.setProperty('--side', i.toString()))
 
     }, [])
 
